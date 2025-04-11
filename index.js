@@ -21,7 +21,7 @@ function createStore(reducer) {
   
     // Subscribe to state changes
     const subscribe = (subscriber) => {
-        subscribers.push(subscriber);  // Add the listener to the subscribers list
+        subscribers.push(subscriber);  // Add the subscriber to the subscribers list
         return () => subscribers = subscribers.filter(l => l !== subscriber);
 
     };
