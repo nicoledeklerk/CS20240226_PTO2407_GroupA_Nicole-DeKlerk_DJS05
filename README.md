@@ -17,3 +17,7 @@ In order to initialize the state, I dispatched the dummy '__INIT__' action to en
 ## Challenges I faced and how I overcame them
 
 During the early stages of my code, I had a challenge with initially understanding why the 'RESET' action in my test scenario was working even though I did not explicitly create a 'RESET' handler in the counterReducer function. I later realized that because I had already placed a default state value as an argument in the counterReducer function (state = { value: 0 }), any unknown action types—including 'RESET'—would simply return the current state without modification. This made it look like the state was resetting, but in reality, it was just persisting. Once I understood this behavior, I added an explicit handler for the 'RESET' action (if (action.type === 'RESET') return { value: 0 };) to ensure the reducer resets the state properly when that action is dispatched. 
+
+## Summary
+
+This project helped me deeply understand how Redux-like state management works under the hood. I practiced concepts like pure functions, immutability, and subscriptions to manage and log the state of a counting Tally App. 
