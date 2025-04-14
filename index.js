@@ -40,7 +40,19 @@ function createStore(reducer) {
   });
 
 
+  console.log(store.getState());
+
+  console.log(store.dispatch({ type: 'ADD' }));
+  console.log(store.getState());
+
+  console.log(store.dispatch({ type: 'ADD' }));
+  console.log(store.getState());
+
+  console.log(store.dispatch({ type: 'SUBTRACT' }));
+  console.log(store.getState());
+
+  console.log(store.dispatch({ type: 'RESET' }));
+  console.log(store.getState());
+  
 
 
-  
-  
